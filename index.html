@@ -14,7 +14,7 @@
         <a class="title-link" href="/">
             <h1 class="title">Greensock Course</h1>
         </a>
-        <h2 class="subtitle">Made with
+        <h2 class="subtitle">Made wit
             <svg class="heart" viewBox="0 0 32 29.6" width="10" fill="#ec2e2e">
                 <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
                 c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
@@ -36,6 +36,57 @@
             <li class="item"><a href="./draggable/">Draggable</a></li>
         </ul>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+        const title = document.querySelector('.title');
+
+        TweenMax.set(title, {
+            opacity: 0,
+            x: -1000,
+        });
+
+        TweenMax.to(title, 1.5, {
+            opacity: 1,
+            x: 0,
+        });
+
+        const subtitle = document.querySelector('.subtitle');
+
+        TweenMax.set(subtitle, {
+            opacity: 0,
+            x: 1000,
+        });
+
+        TweenMax.to(subtitle, 1.8, {
+            opacity: 1,
+            x: 0,
+        });
+
+        const heading = document.querySelector('.heading');
+        TweenMax.set(heading, {
+            opacity: 0,
+            y: -1000,
+        });
+
+        TweenMax.to(heading, 2.2, {
+            opacity: 1,
+            y: 0,
+        });
+
+        const items = document.querySelectorAll('.item');
+        TweenMax.set(items, {
+            opacity: 0,
+            scale: .1,
+            rotation: 360,
+        });
+
+        TweenMax.to(items, 2, {
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+        });
+    </script>
 </body>
 
 </html>
